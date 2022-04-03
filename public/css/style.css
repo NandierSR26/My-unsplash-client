@@ -1,0 +1,323 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+:root {
+    --poppins: 'Poppins', sans-serif;
+    --noto-sans: 'Noto Sans', sans-serif;
+    --montserrat: 'Montserrat', sans-serif;
+}
+
+body {
+    margin: 0 90px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    margin-bottom: 50px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.logo img {
+    margin: 0;
+}
+
+.header-section {
+    display: flex;
+    height: 55px;
+}
+
+.search-input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 300px;
+    height: 55px;
+    border: 1px solid #BDBDBD;
+    border-radius: 10px;
+    padding-left: 10px;
+
+}
+
+.search-input input {
+    width: 90%;
+    height: 90%;
+    margin-left: 10px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: var(--noto-sans);
+    font-weight: 500;
+    color: #BDBDBD;
+}
+
+.search-input span i {
+    color: #BDBDBD;
+}
+
+.search-input span {
+    width: 17.05px;
+}
+
+.btn-add-photo {
+    width: 137px;
+    height: 55px;
+    background-color: #3DB46D;
+    color: #FFFFFF;
+    font-family: var(--noto-sans);
+    font-weight: 700;
+    font-size: 14px;
+    border: none;
+    border-radius: 12px;
+}
+
+.gallery {
+    columns: 5 320px;
+    column-gap: 30px;
+}
+
+.gallery-img {
+    position: relative;
+}
+
+.gallery-img:hover .detalles-hover {
+    visibility: visible;
+}
+
+.gallery img {
+    min-width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+    display: block;
+    border-radius: 10px;
+}
+
+.detalles-hover {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.432);
+    border-radius: 12px;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+}
+
+.detalles-hover .btn-delete {
+    margin: 15px;
+    align-self: flex-end;
+    width: 100px;
+    height: 40px;
+    background-color: transparent;
+    border: 3px solid #EB5757;
+    border-radius: 20px;
+    color: #EB5757;
+    font-family: var(--montserrat);
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.detalles-hover p {
+    display: flex;
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    align-items: flex-end;
+    font-family: var(--montserrat);
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.form-add-image {
+    width: 620px;
+    height: 367px;
+    border-radius: 12px;
+    background-color: #FFFFFF;
+    padding: 30px;
+}
+
+.form-add-image h3 {
+    font-family: var(--noto-sans);
+    font-size: 24px;
+    font-weight: 500;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.form-add-image label {
+    font-family: var(--noto-sans);
+    font-size: 14px;
+    font-weight: 500;
+    color: #4F4F4F;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form-add-image input[type="text"] {
+    width: 552px;
+    height: 55px;
+    outline: 0;
+    border-radius: 12px;
+    border: 2px solid #4F4F4F;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    color: #BDBDBD;
+    font-family: var(--noto-sans);
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.form-add-image input[type="submit"] {
+    width: 105px;
+    height: 55px;
+    background: #3DB46D;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    border: none;
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+.form-add-image .btn-cancel {
+    font-family: 'Noto Sans';
+    font-style: normal;
+    border: none;
+    background-color: transparent;
+    font-weight: 500;
+    font-size: 16px;
+    color: #BDBDBD;
+    margin-right: 10px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10px;
+}
+
+.results {
+    font-size: 25px;
+    font-family: var(--poppins);
+    color: grey;
+    margin-bottom: 20px;
+}
+
+footer {
+    border-top: 1px solid #ccc;
+    margin-top: 20px;
+    height: 50px;
+    padding: 50px;
+}
+
+footer p {
+    font-size: 14px;
+    font-family: var(--noto-sans);
+    font-weight: 100;
+    color: #BDBDBD;
+    text-align: center;
+}
+
+.show {
+    visibility: visible;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.none {
+    display: none;
+}
+
+
+/* ===================== modal ======================== */
+
+.ReactModalPortal > div{
+    opacity: 0;
+}
+
+.ReactModalPortal .ReactModal__Overlay {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    transition: opacity .2s ease-in-out;
+    z-index: 999;
+}
+
+.modal-fondo {
+    background-color: rgba(0, 0, 0, 0.3);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    position: fixed;
+}
+
+.ReactModalPortal .ReactModal__Overlay--after-open {
+    opacity: 1;
+}
+
+.ReactModalPortal .ReactModal__Overlay--before-close {
+    opacity: 0;
+}
+
+.modal {
+    background: white;
+    border-radius: 12px;
+    color: rgb(51, 51, 51);
+    display: inline;
+    max-width: 620px;
+    max-height: 367px;
+    outline: none;
+}
+
+/* ================= date picker ================*/
+.react-datetime-picker input:focus {
+    outline: none;
+}
+
+.react-datetime-picker {
+    display: flex;
+    border: 0px solid gray !important;
+}
+
+
+/* ========== FABS ============== */
+
+.fab {
+    border-radius: 50%;
+    bottom: 25px;
+    font-size: 30px;
+    padding: 25px;
+    position: fixed;
+    right: 25px;
+}
+
+.fab-danger {
+    bottom: 25px;
+    padding: 10px;
+    position: fixed;
+    left: 25px;
+}
+
+.pointer {
+    cursor: pointer;
+}
